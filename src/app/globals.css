@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "material-symbols";
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,10 +25,45 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 48;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "opsz" 48;
+}
+
+@media screen and (max-width: 959px) {
+  video {
+    object-fit: fill;
+    height: 100vh;
+    width: auto;
+    /* transform: scale(6, 7); */
+
+    /* transform: scaleY(8);
+    -webkit-transform: scaleY(8);
+    -moz-transform: scaleY(8); */
+    /* 
+    transform: scaleX(4);
+    -webkit-transform: scaleX(4);
+    -moz-transform: scaleX(4); */
+  }
+  .hero-description {
+    box-shadow: 15px 15px 10px 0 white, -15px -15px 10px 0 white;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    height: 100vh;
   }
 }
